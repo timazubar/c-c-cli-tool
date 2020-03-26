@@ -1,60 +1,30 @@
-# RS School REST service
+# caesar-cipher-cli-tool
 
-## Prerequisites
+## About
 
-- Git - [Download & Install Git](https://git-scm.com/downloads).
-- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+Caesar cipher cli tool is made for command line encoding/decoding strings and text files with Caesar cipher.
 
-## Downloading
+## How to install
 
-```
-git clone {repository URL}
-```
+1. Clone this repo to your local machine.
+2. Go to folder.
+3. Run `npm install`.
 
-## Installing NPM modules
+## How to use
 
-```
-npm install
-```
+Run `node caesar-cli` in your command line with following required options:
+- `-s, --shift <shift size>` - set letters shift size
+- `-a, --action <encode|decode>` - set action to perform (only `encode` and `decode` available)
 
-## Running application
+Then you write string you want to encode/decode and hit enter to see result.
 
-```
-npm start
-```
+If you want to process files you should copy them into project folder and use following optional arguments:
+- `-i, --input <input file path>` - set path to input file
+- `-o, --output <output file path>'` - set path to output file
 
-After starting the app on port (4000 as default) you can open
-in your browser OpenAPI documentation by typing http://localhost:4000/doc/.
-For more information about OpenAPI/Swagger please visit https://swagger.io/.
+## Examples
 
-## Testing
-
-After application running open new terminal and enter:
-
-To test without authorization
-
-```
-npm test
-```
-
-To test with authorization
-
-```
-npm run test:auth
-```
-
-## Development
-
-If you're using VSCode, you can get a better developer experience from integration with [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions.
-
-### Auto-fix and format
-
-```
-npm run lint
-```
-
-### Debugging in VSCode
-
-Press <kbd>F5</kbd> to debug.
-
-For more information, visit: https://code.visualstudio.com/docs/editor/debugging
+ * `node caesar-cli -s 1 -a encode` - encode string with shift in one letter
+ * `node caesar-cli --shift 1 --action encode` - same as previous
+* `node caesar-cli -s 1 -a encode -i input.txt -o output.txt` - encode file *input.txt* with shift in one letter and save result into *output.txt*
+* `node caesar-cli --shift 1 --action encode --input input.txt --output output.txt` - same as previous
