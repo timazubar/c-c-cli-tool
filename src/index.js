@@ -19,7 +19,7 @@ program.parse(process.argv);
 
 process.on('exit', (code) => {
   process.stdout.write(chalk.white.bgBlack.bold(' EXIT CODE '));
-  process.stdout.write(chalk.keyword('orange')(` ${code}\n`));
+  process.stdout.write(chalk.keyword('green')(` ${code}\n`));
 });
 
 const programOpts = program.opts();

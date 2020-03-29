@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 const doErrorWarningCheck = (programOpts) => {
   if (typeof programOpts.shift === 'undefined') {
-    process.stderr.write(chalk.rgb(0, 0, 0).bgRed.bold(' ERROR '));
+    process.stderr.write(chalk.white.bgRed.bold(' ERROR '));
     process.stderr.write(' Option ');
     process.stderr.write(
       chalk.white.bgBlackBright.bold(' -s, --shift <shift size> '),
@@ -12,7 +12,7 @@ const doErrorWarningCheck = (programOpts) => {
   }
 
   if (typeof programOpts.shift === 'boolean') {
-    process.stderr.write(chalk.rgb(0, 0, 0).bgRed.bold(' ERROR '));
+    process.stderr.write(chalk.white.bgRed.bold(' ERROR '));
     process.stderr.write(' option ');
     process.stderr.write(
       chalk.white.bgBlackBright.bold(' -s, --shift <shift size> '),
