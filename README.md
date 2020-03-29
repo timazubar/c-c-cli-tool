@@ -1,4 +1,4 @@
-# caesar-cipher-cli-tool
+# Caesar cipher CLI tool
 
 ## About
 
@@ -12,7 +12,7 @@ Caesar cipher cli tool is made for command line encoding/decoding strings and te
 
 ## How to use
 
-Run `node caesar-cli` in your command line with following required options:
+Run `node index.js` in your command line with following required options:
 - `-s, --shift <shift size>` - set letters shift size
 - `-a, --action <encode|decode>` - set action to perform (only `encode` and `decode` available)
 
@@ -24,7 +24,7 @@ If you want to process files you should copy them into project folder and use fo
 
 ## Examples
 
- * `node caesar-cli -s 1 -a encode` - encode string with shift in one letter
- * `node caesar-cli --shift 1 --action encode` - same as previous
-* `node caesar-cli -s 1 -a encode -i input.txt -o output.txt` - encode file *input.txt* with shift in one letter and save result into *output.txt*
-* `node caesar-cli --shift 1 --action encode --input input.txt --output output.txt` - same as previous
+ * `node index.js -s 1 -a encode` - encode string with shift in one letter
+ * `node index.js --shift 1 --action encode` - same as previous
+* `node index.js -s 1 -a encode -i input.txt -o output.txt` - encode file *input.txt* with shift in one letter and save result into *output.txt*
+* `node index.js --shift 1 --action encode --input input.txt --output output.txt` - same as previous
